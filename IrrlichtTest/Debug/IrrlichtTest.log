@@ -1,0 +1,17 @@
+﻿  GeneralManager.cpp
+c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\playerstate.h(76): warning C4244: 'argument': conversion from 'double' to 'const irr::f32', possible loss of data
+c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\generalmanager.cpp(111): warning C4244: 'argument': conversion from 'float' to 'const irr::u32', possible loss of data
+c:\users\vassy lord of arda\code\irrlicht-1.8.4 (1)\irrlicht-1.8.4\include\vector3d.h(452): warning C4244: 'argument': conversion from 'const int' to 'const irr::f32', possible loss of data
+  c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\playerstate.h(76): note: see reference to function template instantiation 'irr::core::vector3d<irr::f32> irr::core::operator *<int,irr::f32>(const S,const irr::core::vector3d<irr::f32> &)' being compiled
+          with
+          [
+              S=int
+          ]
+c:\users\vassy lord of arda\code\irrlicht-1.8.4 (1)\irrlicht-1.8.4\include\vector3d.h(452): warning C4244: 'argument': conversion from 'const double' to 'const irr::f32', possible loss of data
+  c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\playerstate.h(76): note: see reference to function template instantiation 'irr::core::vector3d<irr::f32> irr::core::operator *<double,irr::f32>(const S,const irr::core::vector3d<irr::f32> &)' being compiled
+          with
+          [
+              S=double
+          ]
+  IrrlichtTest.vcxproj -> C:\Users\Vassy Lord of Arda\Documents\Visual Studio 2015\Projects\IrrlichtPlayground\Debug\IrrlichtTest.exe
+  IrrlichtTest.vcxproj -> C:\Users\Vassy Lord of Arda\Documents\Visual Studio 2015\Projects\IrrlichtPlayground\Debug\IrrlichtTest.pdb (Full PDB)

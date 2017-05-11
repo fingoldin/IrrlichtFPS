@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{ceed2bff-8ba9-4783-bfb2-b7d3bca2c8be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input\InputContexts">
+      <UniqueIdentifier>{870b9e43-fa3d-4e79-9dfb-154fd3a85f89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\States">
+      <UniqueIdentifier>{4f232650-7a2d-41b0-b714-88678eec4b1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\States\GameStates">
+      <UniqueIdentifier>{6f49699d-8708-4131-b6d3-4450a6709675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\States\PlayerStates">
+      <UniqueIdentifier>{702e6285-b977-4253-9f40-2a649b356225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\States\PlayerStates\EquipmentStates">
+      <UniqueIdentifier>{5c016c37-231e-4193-a426-7c84ed4c7d40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\States\PlayerStates\VirtualStates">
+      <UniqueIdentifier>{ea10de10-ecaf-4c00-a8bb-d3b1c9cb4728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input\Commands">
+      <UniqueIdentifier>{eb2bb9ba-7c23-46f5-8c0a-eb4bf33ba187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\States">
+      <UniqueIdentifier>{0829155e-6be1-4735-b304-b960f0f4761d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Weapons">
+      <UniqueIdentifier>{9722f22b-5b6d-4c61-8d92-1e8772fdff6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Shaders">
+      <UniqueIdentifier>{eba340fb-089f-487d-8dbb-a3fd08add700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Shaders\Shader Files">
+      <UniqueIdentifier>{8c3f3258-fc61-430a-bca8-560d0a6536ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Animations">
+      <UniqueIdentifier>{d48ba5b6-93b8-4f7d-8ce6-8a4adfc972e2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files\States\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputContext.h">
+      <Filter>Header Files\Input\InputContexts</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingContext.h">
+      <Filter>Header Files\Input\InputContexts</Filter>
+    </ClInclude>
+    <ClInclude Include="LookFPContext.h">
+      <Filter>Header Files\Input\InputContexts</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponContext.h">
+      <Filter>Header Files\Input\InputContexts</Filter>
+    </ClInclude>
+    <ClInclude Include="InputMap.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="CEventReceiver.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="EquipmentState.h">
+      <Filter>Header Files\States\PlayerStates\EquipmentStates</Filter>
+    </ClInclude>
+    <ClInclude Include="FiringState.h">
+      <Filter>Header Files\States\PlayerStates\EquipmentStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayState.h">
+      <Filter>Header Files\States\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateInputContext.h">
+      <Filter>Header Files\Input\InputContexts</Filter>
+    </ClInclude>
+    <ClInclude Include="EventInputContext.h">
+      <Filter>Header Files\Input\InputContexts</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpingState.h">
+      <Filter>Header Files\States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveForward.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="StandbyState.h">
+      <Filter>Header Files\States\PlayerStates\EquipmentStates</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveBackward.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveLeft.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveRight.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack2.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Reload.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Quickswitch.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="SwitchPrimary.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="SwitchSecondary.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Jump.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Die.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="AliveContext.h">
+      <Filter>Header Files\Input\InputContexts</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawn.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="DeadState.h">
+      <Filter>Header Files\States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerState.h">
+      <Filter>Header Files\States\PlayerStates\VirtualStates</Filter>
+    </ClInclude>
+    <ClInclude Include="FallingState.h">
+      <Filter>Header Files\States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="CrouchFallingState.h">
+      <Filter>Header Files\States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="RunningState.h">
+      <Filter>Header Files\States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="CrouchJumpingState.h">
+      <Filter>Header Files\States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="WalkingState.h">
+      <Filter>Header Files\States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="RestingState.h">
+      <Filter>Header Files\States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="CrouchWalkingState.h">
+      <Filter>Header Files\States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="CrouchRestingState.h">
+      <Filter>Header Files\States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="ReloadingState.h">
+      <Filter>Header Files\States\PlayerStates\EquipmentStates</Filter>
+    </ClInclude>
+    <ClInclude Include="SwitchingState.h">
+      <Filter>Header Files\States\PlayerStates\EquipmentStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Crouch.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Walk.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CanJumpState.h">
+      <Filter>Header Files\States\PlayerStates\VirtualStates</Filter>
+    </ClInclude>
+    <ClInclude Include="SwitchKnife.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CanSwitchState.h">
+      <Filter>Header Files\States\PlayerStates\EquipmentStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>Header Files\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="FiveSeven.h">
+      <Filter>Header Files\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneralManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitContext.h">
+      <Filter>Header Files\Input\InputContexts</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrouchingState.h">
+      <Filter>Header Files\States\PlayerStates\VirtualStates</Filter>
+    </ClInclude>
+    <ClInclude Include="StandingState.h">
+      <Filter>Header Files\States\PlayerStates\VirtualStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="PerPixelShader.h">
+      <Filter>Header Files\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="PerPixelOldShader.h">
+      <Filter>Header Files\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="FancyShader.h">
+      <Filter>Header Files\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="M4A4.h">
+      <Filter>Header Files\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Header Files\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="SwitchAnimation.h">
+      <Filter>Header Files\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="RestAnimation.h">
+      <Filter>Header Files\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="FullAutoAnimation.h">
+      <Filter>Header Files\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="SemiAutoAnimation.h">
+      <Filter>Header Files\Animations</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IrrlichtTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CEventReceiver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RunningState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkingState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="RestingState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpingState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="FallingState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="CrouchWalkingState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="CrouchRestingState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="CrouchJumpingState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="CrouchFallingState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="CanSwitchState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneralManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SwitchingState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="StandybyState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="FiringState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="IrrlichtTest.rc">
+      <Filter>Header Files\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fancyshader.vert">
+      <Filter>Header Files\Shaders\Shader Files</Filter>
+    </None>
+    <None Include="fancyshader.frag">
+      <Filter>Header Files\Shaders\Shader Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

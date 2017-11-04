@@ -18,18 +18,18 @@ public:
 
 	}
 
-	void run(Character * player, bool flag)
+	void run(Character * player, bool flag, irr::u32 time)
 	{
 		if (!player)
 			return;
 
-		player->setInputState(EIS_ATTACK2, flag);
+		player->setInputState(EIS_ATTACK2, flag, time);
 
 		if (flag)
 		{
 			EquipmentState * state = player->getEState();
 			if (state)
-				state->attack2(player);
+				state->attack2(player, time);
 		}
 	}
 };

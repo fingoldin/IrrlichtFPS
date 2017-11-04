@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Actor.h"
+#include "HitboxActor.h"
+#include "CharacterHitboxNode.h"
 
 enum E_INPUT_STATES
 {
@@ -64,32 +65,36 @@ struct FirstPersonNode
 struct ThirdPersonNode
 {
 	irr::scene::ISceneNode * root;
-	irr::scene::ISceneNode * body;
+	CharacterHitboxNode * leftLeg;
+	CharacterHitboxNode * rightLeg;
+	CharacterHitboxNode * torso;
+	CharacterHitboxNode * rightArm;
+	CharacterHitboxNode * leftArm;
+	CharacterHitboxNode * head;
 	irr::scene::ISceneNode * weaponTag;
 };
 
-class Character : public Actor, public irr::IReferenceCounted
+class Character : public HitboxActor, public irr::IReferenceCounted
 {
 public:
 	Character(class Core * core, irr::s32 id);
 	~Character();
 
 	void setFP(bool en);
-	
-	void OnRegisterSceneNode();
-	void render() { }
+
+	bool getFP() { return FPenabled; }
 
 	//irr::u32 getMaterialCount() const { return 0; }
 
 	//const irr::core::aabbox3d<irr::f32>& getBoundingBox() const { return thirdPersonNode.root->getBoundingBox(); }
 
 	class PlayerState * getState();
-	void setState(class PlayerState * set);
+	void setState(class PlayerState * set, irr::u32 time);
 
 	class EquipmentState * getEState();
-	void setEState(class EquipmentState * set);
+	void setEState(class EquipmentState * set, irr::u32 time);
 
-	void setInputState(E_INPUT_STATES state, bool value);
+	void setInputState(E_INPUT_STATES state, bool value, irr::u32 time);
 
 	bool getInputState(E_INPUT_STATES state) { return inputStates[state]; }
 
@@ -97,23 +102,30 @@ public:
 
 	bool setWeapon(E_SELECTED_WEAPON weapon);
 	E_SELECTED_WEAPON getPreviousWeapon() { return previousWeapon; }
-	void switchWeapons(E_SWITCH_WEAPON_TYPE weapon);
+	void switchWeapons(E_SWITCH_WEAPON_TYPE weapon, irr::u32 time);
 
 	FirstPersonNode getFirstPersonNode() { return firstPersonNode; }
 	ThirdPersonNode getThirdPersonNode() { return thirdPersonNode; }
 
-	void setVerticalAngle(double set);
-	double getVerticalAngle() { return vAngle; }
+	void setVerticalAngle(irr::f32 set);
+	irr::f32 getVerticalAngle() { return vAngle; }
 
-	void setHorizontalAngle(double set);
-	double getHorizontalAngle() { return hAngle; }
+	void setHorizontalAngle(irr::f32 set);
+	irr::f32 getHorizontalAngle() { return hAngle; }
 
-	bool addWeapon(Weapon * weapon);
+	bool addWeapon(Weapon * weapon, irr::u32 time);
 
 	virtual void update(class Core * core, irr::u32 time);
 
 	void setPosition(const irr::core::vector3df& newPos);
 	irr::core::vector3df getPosition() { return pos; }
+
+	void takeDamage(irr::f32 amount);
+
+	class Core * getCore() { return core; }
+
+	void spawn();
+	void die();
 
 private:
 
@@ -139,8 +151,10 @@ private:
 	ThirdPersonNode thirdPersonNode;
 	FirstPersonNode firstPersonNode;
 
-	double vAngle;
-	double hAngle;
+	irr::f32 vAngle;
+	irr::f32 hAngle;
+
+	irr::f32 health;
 
 	irr::core::vector3df pos;
 };

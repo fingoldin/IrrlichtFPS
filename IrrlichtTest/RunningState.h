@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CanJumpState.h"
+#include "LegMovingState.h"
 
 class RunningState : public CanJumpState
 {

@@ -10,8 +10,8 @@ public:
 	CanJumpState() : StandingState() { }
 	virtual ~CanJumpState() { }
 
-	virtual void jump(Character * player)
+	virtual void jump(Character * player, irr::u32 time)
 	{
-		player->setState(DBG_NEW JumpingState());
+		player->setState(DBG_NEW JumpingState(), time);
 	}
 };

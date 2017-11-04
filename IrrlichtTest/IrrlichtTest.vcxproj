@@ -156,7 +156,8 @@
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Attack.h" />
     <ClInclude Include="Attack2.h" />
-    <ClInclude Include="CanSwitchState.h" />
+    <ClInclude Include="CanReloadState.h" />
+    <ClInclude Include="CharacterHitboxNode.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Crouch.h" />
     <ClInclude Include="CrouchFallingState.h" />
@@ -165,13 +166,19 @@
     <ClInclude Include="CrouchRestingState.h" />
     <ClInclude Include="CrouchWalkingState.h" />
     <ClInclude Include="DeadState.h" />
-    <ClInclude Include="Die.h" />
     <ClInclude Include="FallingState.h" />
     <ClInclude Include="FancyShader.h" />
     <ClInclude Include="FiveSeven.h" />
     <ClInclude Include="FullAutoAnimation.h" />
     <ClInclude Include="GeneralManager.h" />
     <ClInclude Include="ExitContext.h" />
+    <ClInclude Include="HitboxActor.h" />
+    <ClInclude Include="HitboxNode.h" />
+    <ClInclude Include="LegMovingState.h" />
+    <ClInclude Include="MovingState.h" />
+    <ClInclude Include="ProjectileManager.h" />
+    <ClInclude Include="SphereHitboxNode.h" />
+    <ClInclude Include="ReloadAnimation.h" />
     <ClInclude Include="RestAnimation.h" />
     <ClInclude Include="SemiAutoAnimation.h" />
     <ClInclude Include="SwitchAnimation.h" />
@@ -195,7 +202,6 @@
     <ClInclude Include="Settings.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShadowManager.h" />
-    <ClInclude Include="Spawn.h" />
     <ClInclude Include="StandbyState.h" />
     <ClInclude Include="StandingState.h" />
     <ClInclude Include="SwitchingState.h" />
@@ -226,6 +232,7 @@
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="CharacterHitboxNode.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="CEventReceiver.cpp" />
@@ -233,12 +240,17 @@
     <ClCompile Include="CrouchJumpingState.cpp" />
     <ClCompile Include="CrouchRestingState.cpp" />
     <ClCompile Include="CrouchWalkingState.cpp" />
+    <ClCompile Include="EquipmentState.cpp" />
     <ClCompile Include="FallingState.cpp" />
     <ClCompile Include="FiringState.cpp" />
     <ClCompile Include="GeneralManager.cpp" />
+    <ClCompile Include="HitboxActor.cpp" />
     <ClCompile Include="InputMap.cpp" />
     <ClCompile Include="IrrlichtTest.cpp" />
     <ClCompile Include="JumpingState.cpp" />
+    <ClCompile Include="LegMovingState.cpp" />
+    <ClCompile Include="ProjectileManager.cpp" />
+    <ClCompile Include="SphereHitboxNode.cpp" />
     <ClCompile Include="RestingState.cpp" />
     <ClCompile Include="RunningState.cpp" />
     <ClCompile Include="Settings.cpp" />
@@ -251,7 +263,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="CanSwitchState.cpp" />
+    <ClCompile Include="CanReloadState.cpp" />
     <ClCompile Include="SwitchingState.cpp" />
     <ClCompile Include="WalkingState.cpp" />
     <ClCompile Include="Weapon.cpp" />

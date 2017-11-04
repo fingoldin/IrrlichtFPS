@@ -15,12 +15,14 @@ public:
 	{
 		if (firstUpdate)
 		{
-			startTime = timeMs;
 			firstUpdate = false;
 			node->setRotation(irr::core::vector3df(0.0f, 0.0f, 0.0f));
 		}
 
-		node->setPosition(irr::core::vector3df(-0.2f - 0.2f * sin(M_PI * (double)(timeMs - startTime) / (double)shotTime), 0.4f, -0.4f));
+		if (!startTime)
+			startTime = timeMs;
+
+		node->setPosition(irr::core::vector3df(-0.2f - 0.2f * (irr::f32)sin(M_PI * (double)(timeMs - startTime) / (double)shotTime), 0.4f, -0.4f));
 	}
 
 	virtual ISceneNodeAnimator * createClone(irr::scene::ISceneNode *node, irr::scene::ISceneManager *newManager = 0)
@@ -31,5 +33,4 @@ public:
 private:
 
 	irr::u32 shotTime;
-	irr::u32 startTime;
 };

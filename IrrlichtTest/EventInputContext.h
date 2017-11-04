@@ -22,7 +22,7 @@ public:
 		return false;
 	}
 
-	virtual bool runCommand(Core * core, Command * command, bool flag)
+	virtual bool runCommand(Core * core, Command * command, bool flag, irr::u32 time)
 	{
 		if (!core || !command)
 			return false;
@@ -35,7 +35,7 @@ public:
 		if(player && core && command && std::find(validCommands.begin(), validCommands.end(), command->getType()) != validCommands.end())
 		{
 			//OutputDebugString(L"hello");
-			command->run(player, flag);
+			command->run(player, flag, time);
 			return true;
 		}
 

@@ -1,29 +1,64 @@
-﻿  Character.cpp
-c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(76): warning C4244: 'argument': conversion from 'double' to 'const irr::f32', possible loss of data
-c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\RestAnimation.h(22): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
-c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\SwitchAnimation.h(26): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
-c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\SwitchAnimation.h(27): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
-c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\SemiAutoAnimation.h(26): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
-c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\FullAutoAnimation.h(23): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
-Character.cpp(99): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
-Character.cpp(102): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
+﻿  CanSwitchState.cpp
+  Character.cpp
+c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(77): warning C4244: 'argument': conversion from 'double' to 'const irr::f32', possible loss of data
+c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\RestAnimation.h(24): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
+c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\SwitchAnimation.h(28): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
+c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\SwitchAnimation.h(29): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
+c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\SemiAutoAnimation.h(28): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
+c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\FullAutoAnimation.h(25): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
+Character.cpp(103): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
 Character.cpp(106): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
+Character.cpp(110): warning C4244: 'argument': conversion from 'double' to 'irr::f32', possible loss of data
 c:\users\vassy lord of arda\code\irrlicht-1.8.4 (1)\irrlicht-1.8.4\include\vector3d.h(452): warning C4244: 'argument': conversion from 'const int' to 'const irr::f32', possible loss of data
-  c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(76): note: see reference to function template instantiation 'irr::core::vector3d<irr::f32> irr::core::operator *<int,irr::f32>(const S,const irr::core::vector3d<irr::f32> &)' being compiled
+  c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(77): note: see reference to function template instantiation 'irr::core::vector3d<irr::f32> irr::core::operator *<int,irr::f32>(const S,const irr::core::vector3d<irr::f32> &)' being compiled
           with
           [
               S=int
           ]
 c:\users\vassy lord of arda\code\irrlicht-1.8.4 (1)\irrlicht-1.8.4\include\vector3d.h(452): warning C4244: 'argument': conversion from 'const double' to 'const irr::f32', possible loss of data
-  c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(76): note: see reference to function template instantiation 'irr::core::vector3d<irr::f32> irr::core::operator *<double,irr::f32>(const S,const irr::core::vector3d<irr::f32> &)' being compiled
+  c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(77): note: see reference to function template instantiation 'irr::core::vector3d<irr::f32> irr::core::operator *<double,irr::f32>(const S,const irr::core::vector3d<irr::f32> &)' being compiled
           with
           [
               S=double
           ]
+  Command.cpp
+c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(77): warning C4244: 'argument': conversion from 'double' to 'const irr::f32', possible loss of data
+c:\users\vassy lord of arda\code\irrlicht-1.8.4 (1)\irrlicht-1.8.4\include\vector3d.h(452): warning C4244: 'argument': conversion from 'const int' to 'const irr::f32', possible loss of data
+  c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(77): note: see reference to function template instantiation 'irr::core::vector3d<irr::f32> irr::core::operator *<int,irr::f32>(const S,const irr::core::vector3d<irr::f32> &)' being compiled
+          with
+          [
+              S=int
+          ]
+c:\users\vassy lord of arda\code\irrlicht-1.8.4 (1)\irrlicht-1.8.4\include\vector3d.h(452): warning C4244: 'argument': conversion from 'const double' to 'const irr::f32', possible loss of data
+  c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(77): note: see reference to function template instantiation 'irr::core::vector3d<irr::f32> irr::core::operator *<double,irr::f32>(const S,const irr::core::vector3d<irr::f32> &)' being compiled
+          with
+          [
+              S=double
+          ]
+  FiringState.cpp
+FiringState.cpp(40): warning C4018: '>': signed/unsigned mismatch
+FiringState.cpp(44): warning C4018: '>': signed/unsigned mismatch
+  GeneralManager.cpp
+c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(77): warning C4244: 'argument': conversion from 'double' to 'const irr::f32', possible loss of data
+GeneralManager.cpp(124): warning C4244: 'argument': conversion from 'float' to 'const irr::u32', possible loss of data
+c:\users\vassy lord of arda\code\irrlicht-1.8.4 (1)\irrlicht-1.8.4\include\vector3d.h(452): warning C4244: 'argument': conversion from 'const int' to 'const irr::f32', possible loss of data
+  c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(77): note: see reference to function template instantiation 'irr::core::vector3d<irr::f32> irr::core::operator *<int,irr::f32>(const S,const irr::core::vector3d<irr::f32> &)' being compiled
+          with
+          [
+              S=int
+          ]
+c:\users\vassy lord of arda\code\irrlicht-1.8.4 (1)\irrlicht-1.8.4\include\vector3d.h(452): warning C4244: 'argument': conversion from 'const double' to 'const irr::f32', possible loss of data
+  c:\users\vassy lord of arda\documents\visual studio 2015\projects\irrlichtplayground\irrlichttest\PlayerState.h(77): note: see reference to function template instantiation 'irr::core::vector3d<irr::f32> irr::core::operator *<double,irr::f32>(const S,const irr::core::vector3d<irr::f32> &)' being compiled
+          with
+          [
+              S=double
+          ]
+  StandybyState.cpp
+  SwitchingState.cpp
   Generating code
-  2 of 1432 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  33 of 1435 functions ( 2.3%) were compiled, the rest were copied from previous compilation.
+    2 functions were new in current compilation
+    6 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   IrrlichtTest.vcxproj -> C:\Users\Vassy Lord of Arda\Documents\Visual Studio 2015\Projects\IrrlichtPlayground\Release\IrrlichtTest.exe
   IrrlichtTest.vcxproj -> C:\Users\Vassy Lord of Arda\Documents\Visual Studio 2015\Projects\IrrlichtPlayground\Release\IrrlichtTest.pdb (Full PDB)

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "CanSwitchState.h"
+#include "CanReloadState.h"
 
-class StandbyState : public CanSwitchState
+class StandbyState : public CanReloadState
 {
 public:
-	StandbyState() : CanSwitchState()
+	StandbyState() : CanReloadState()
 	{
 		name = "StandbyState";
 	}
@@ -15,12 +15,18 @@ public:
 
 	}
 
-	virtual void enter(Character * player, Core * core)
+	virtual void enter(Character * player, Core * core, irr::u32 time)
 	{
-		setAnimation(player, EWA_REST);
+		setAnimation(player, EWA_REST, time);
+
+		startTime = time;
 	}
 
-	virtual void attack(Character * player);
+	virtual void attack(Character * player, irr::u32 time);
 
 	virtual void update(Character * player, Core * core, irr::u32 time);
+
+protected:
+
+	irr::u32 startTime;
 };

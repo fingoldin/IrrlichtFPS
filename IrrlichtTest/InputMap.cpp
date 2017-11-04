@@ -17,6 +17,7 @@ InputMap::InputMap(Core * core) : core(core)
 	bindCommand(irr::KEY_KEY_D, std::vector<Command*>{Command::getCommand("right")});
 	bindCommand(irr::KEY_KEY_W, std::vector<Command*>{Command::getCommand("forward")});
 	bindCommand(irr::KEY_KEY_S, std::vector<Command*>{Command::getCommand("backward")});
+	bindCommand(irr::KEY_KEY_R, std::vector<Command*>{Command::getCommand("reload")});
 	bindCommand(irr::KEY_CONTROL, std::vector<Command*>{Command::getCommand("crouch")});
 	bindCommand(irr::KEY_SHIFT, std::vector<Command*>{Command::getCommand("walk")});
 

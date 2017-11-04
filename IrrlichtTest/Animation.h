@@ -7,7 +7,7 @@ class Animation : public irr::scene::ISceneNodeAnimator
 public:
 	Animation() : irr::scene::ISceneNodeAnimator()
 	{
-		setFirstUpdate();
+		setFirstUpdate(0);
 	}
 
 	virtual ~Animation() { }
@@ -15,9 +15,11 @@ public:
 	virtual bool isEventReceiverEnabled() { return false; }
 	virtual bool hasFinished() { return finished; }
 
-	void setFirstUpdate() { firstUpdate = true; finished = false; }
+	void setFirstUpdate(irr::u32 time) { firstUpdate = true; finished = false; startTime = time; }
 
 protected:
+
+	irr::u32 startTime;
 
 	bool firstUpdate;
 	bool finished;

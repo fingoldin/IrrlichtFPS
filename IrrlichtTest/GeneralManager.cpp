@@ -6,6 +6,8 @@
 
 #include "Shader.h"
 
+#include "FiringState.h"
+
 #include "PlayState.h"
 
 GeneralManager::GeneralManager(Core * core) : core(core)
@@ -47,13 +49,22 @@ void GeneralManager::startGame(irr::io::path map)
 
 		//cubeMesh->drop();
 
-		player = new Character(core, -1);
+		player = DBG_NEW Character(core, -1);
+		player->spawn();
 		player->setFP(true);
 		player->setPosition(irr::core::vector3df(0.0f, 1.3f, 0.0f));
 		//player->setRotation(irr::core::vector3df(0.0f, 0.0f, 0.0f));
 		//player->setScale(irr::core::vector3df(2.5f, 2.5f, 2.5f));
 
-		Command::getCommand(ECT_SPAWN)->run(player, true);
+		irr::u32 time = core->getDevice()->getTimer()->getTime();
+
+		Character * player2 = DBG_NEW Character(core, 10);
+		player2->setPosition(irr::core::vector3df(3.0f, 0.0f, 3.0f));
+		player2->spawn();
+		//player2->setFP(true);
+		player2->switchWeapons(ESWT_PRIMARY, time);
+		player2->setInputState(EIS_ATTACK, true, time);
+		player2->getEState()->attack(player2, time);
 
 		irr::scene::IAnimatedMesh * mesh = core->getSmgr()->getMesh(map);
 
@@ -63,8 +74,10 @@ void GeneralManager::startGame(irr::io::path map)
 		irr::scene::ICameraSceneNode * camera = player->getFirstPersonNode().camera;
 
 		if (camera)
+		{
 			core->getSmgr()->setActiveCamera(camera);
-
+			core->getFPSmgr()->setActiveCamera(camera);
+		}
 		auto sunParent = core->getSmgr()->addEmptySceneNode();
 		sunParent->setPosition(irr::core::vector3df(10.0f, 10.0f, 10.0f));
 
@@ -94,12 +107,12 @@ void GeneralManager::startGame(irr::io::path map)
 	
 		//manMesh->drop();
 
-		auto anim = core->getSmgr()->createRotationAnimator(irr::core::vector3df(0.0f, 0.5f, 0.0f));
+		/*auto anim = core->getSmgr()->createRotationAnimator(irr::core::vector3df(0.0f, 0.5f, 0.0f));
 		if (anim)
 		{
 			man->addAnimator(anim);
 			anim->drop();
-		}
+		}*/
 
 		man->setMaterialType((irr::video::E_MATERIAL_TYPE)(Shader::getShader(EST_FANCY)->getID()));
 		man->setScale(irr::core::vector3df(0.3f, 0.3f, 0.3f));
@@ -108,7 +121,7 @@ void GeneralManager::startGame(irr::io::path map)
 		man->setMaterialFlag(irr::video::EMF_GOURAUD_SHADING, false);
 		//man->addShadowVolumeSceneNode();
 
-		irr::scene::IMesh * floor = core->getSmgr()->getGeometryCreator()->createPlaneMesh(irr::core::dimension2d<irr::f32>(2.0f, 2.0f), irr::core::dimension2d<irr::u32>(10.0f, 10.0f));
+		irr::scene::IMesh * floor = core->getSmgr()->getGeometryCreator()->createPlaneMesh(irr::core::dimension2d<irr::f32>(2.0f, 2.0f), irr::core::dimension2d<irr::u32>(10, 10));
 		if (floor)
 		{
 			auto floorNode = core->getSmgr()->addMeshSceneNode(floor);
@@ -116,7 +129,15 @@ void GeneralManager::startGame(irr::io::path map)
 			floor->drop();
 		}
 
-		//core->getSmgr()->addCameraSceneNodeFPS(0, 100.0f, 0.01f);
+		/*irr::scene::ICameraSceneNode * cam = core->getSmgr()->addCameraSceneNode();
+		cam->setTarget(irr::core::vector3df(0.0f, 0.0f, 0.0f));
+
+		auto anim = core->getSmgr()->createFlyCircleAnimator(irr::core::vector3df(0.0f, 5.0f, 0.0f), 5.0f);
+		if (anim)
+		{
+			cam->addAnimator(anim);
+			anim->drop();
+		}*/
 
 		core->setState(DBG_NEW PlayState());
 	}

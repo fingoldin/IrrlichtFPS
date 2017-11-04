@@ -8,7 +8,7 @@
 
 #include "SwitchingState.h"
 
-SwitchingState::SwitchingState() : CanSwitchState()
+SwitchingState::SwitchingState() : EquipmentState()
 {
 	startTime = 0;
 	name = "SwitchingState";
@@ -19,14 +19,14 @@ SwitchingState::~SwitchingState()
 
 }
 
-void SwitchingState::enter(Character * player, Core * core)
+void SwitchingState::enter(Character * player, Core * core, irr::u32 time)
 {
 	if (!player || !core)
 		return;
 
-	setAnimation(player, EWA_SWITCH);
+	setAnimation(player, EWA_SWITCH, time);
 
-	startTime = core->getDevice()->getTimer()->getTime();
+	startTime = time;
 }
 
 void SwitchingState::update(Character * player, Core * core, irr::u32 time)
@@ -35,7 +35,7 @@ void SwitchingState::update(Character * player, Core * core, irr::u32 time)
 		startTime = time;
 
 	if ((time - startTime) >= player->getSelectedWeapon()->getSwitchTime())
-		player->setEState(DBG_NEW StandbyState());
+		player->setEState(DBG_NEW StandbyState(), time);
 	
 	EquipmentState::update(player, core, time);
 }

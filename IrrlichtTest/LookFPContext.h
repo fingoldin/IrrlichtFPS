@@ -37,7 +37,7 @@ public:
 		if (!settings)
 			return;
 
-		double rotateSpeed = settings->queryDouble(EDS_MOUSE_SENS);
+		irr::f32 rotateSpeed = settings->queryDouble(EDS_MOUSE_SENS);
 
 		//irr::scene::ICameraSceneNode * camera = player->getFPCamera();
 

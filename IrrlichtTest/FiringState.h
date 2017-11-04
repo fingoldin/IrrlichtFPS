@@ -1,11 +1,11 @@
 #pragma once
 
-#include "CanSwitchState.h"
+#include "EquipmentState.h"
 
-class FiringState : public CanSwitchState
+class FiringState : public EquipmentState
 {
 public:
-	FiringState() : CanSwitchState()
+	FiringState() : EquipmentState()
 	{
 		name = "FiringState";
 	}
@@ -15,11 +15,11 @@ public:
 
 	}
 
-	virtual void enter(Character * player, Core * core);
+	virtual void enter(Character * player, Core * core, irr::u32 time);
 	virtual void update(Character * player, Core * core, irr::u32 time);
 
 private:
 
-	int shotsFired;
+	irr::u32 shotsFired;
 	irr::u32 startTime;
 };

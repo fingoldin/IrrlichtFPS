@@ -7,7 +7,6 @@
 #include "MoveForward.h"
 #include "Attack.h"
 #include "Attack2.h"
-#include "Die.h"
 #include "Jump.h"
 #include "MoveBackward.h"
 #include "MoveLeft.h"
@@ -18,7 +17,7 @@
 #include "SwitchKnife.h"
 #include "Crouch.h"
 #include "Walk.h"
-#include "Spawn.h"
+#include "Reload.h"
 
 Command * Command::commands[E_COMMAND_TYPE_COUNT];
 
@@ -33,7 +32,7 @@ void Command::initCommands()
 	commands[ECT_RIGHT] = DBG_NEW MoveRight();
 	commands[ECT_ATTACK] = DBG_NEW Attack();
 	commands[ECT_ATTACK2] = DBG_NEW Attack2();
-	commands[ECT_DIE] = DBG_NEW Die();
+	commands[ECT_RELOAD] = DBG_NEW Reload();
 	commands[ECT_JUMP] = DBG_NEW Jump();
 	commands[ECT_QUICKSWITCH] = DBG_NEW Quickswitch();
 	commands[ECT_SWITCHPRIMARY] = DBG_NEW SwitchPrimary();
@@ -41,7 +40,6 @@ void Command::initCommands()
 	commands[ECT_SWITCHKNIFE] = DBG_NEW SwitchKnife();
 	commands[ECT_CROUCH] = DBG_NEW Crouch();
 	commands[ECT_WALK] = DBG_NEW Walk();
-	commands[ECT_SPAWN] = DBG_NEW Spawn();
 }
 
 void Command::cleanupCommands()

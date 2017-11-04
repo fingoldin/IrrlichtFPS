@@ -14,10 +14,8 @@ enum E_COMMAND_TYPE
 	ECT_SWITCHSECONDARY,
 	ECT_SWITCHKNIFE,
 	ECT_JUMP,
-	ECT_DIE,
 	ECT_CROUCH,
 	ECT_WALK,
-	ECT_SPAWN,
 	E_COMMAND_TYPE_COUNT
 };
 
@@ -28,7 +26,7 @@ public:
 	Command() { }
 	virtual ~Command() { }
 
-	virtual void run(class Character * player, bool flag) = 0;
+	virtual void run(class Character * player, bool flag, irr::u32 time) = 0;
 
 	const irr::core::stringc& getName() const { return name; }
 

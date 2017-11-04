@@ -23,18 +23,20 @@ void CrouchWalkingState::update(Character * player, Core * core, irr::u32 time)
 	int x = (int)player->getInputState(EIS_RIGHT) - (int)player->getInputState(EIS_LEFT);
 
 	if (y == 0 && x == 0)
-		player->setState(DBG_NEW CrouchRestingState());
+		player->setState(DBG_NEW CrouchRestingState(), time);
 
 	else if (!player->getInputState(EIS_CROUCH))
 	{
 		if (player->getInputState(EIS_WALK))
-			player->setState(DBG_NEW WalkingState());
+			player->setState(DBG_NEW WalkingState(), time);
 		else
-			player->setState(DBG_NEW RunningState());
+			player->setState(DBG_NEW RunningState(), time);
 	}
 
 	else
+	{
 		move(player, x, y, PLAYER_CROUCH_SPEED, dt);
 
-	CrouchingState::update(player, core, time);
+		CrouchingState::update(player, core, time);
+	}
 }

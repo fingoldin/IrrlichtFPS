@@ -17,8 +17,8 @@ public:
 
 	}
 
-	void run(Character * player, bool flag)
+	void run(Character * player, bool flag, irr::u32 time)
 	{
-		player->setState(DBG_NEW DeadState());
+		player->setState(DBG_NEW DeadState(), time);
 	}
 };

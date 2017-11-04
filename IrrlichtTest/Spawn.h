@@ -20,12 +20,12 @@ public:
 
 	}
 
-	void run(Character * player, bool flag)
+	void run(Character * player, bool flag, irr::u32 time)
 	{
 		if (flag)
 		{
-			player->setState(DBG_NEW RestingState());
-			player->setEState(DBG_NEW StandbyState());
+			player->setState(DBG_NEW RestingState(), time);
+			player->setEState(DBG_NEW StandbyState(), time);
 		}
 	}
 };

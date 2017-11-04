@@ -16,8 +16,8 @@ public:
 
 	}
 
-	void run(Character * player, bool flag)
+	void run(Character * player, bool flag, irr::u32 time)
 	{
-		player->switchWeapons(ESWT_SECONDARY);
+		player->switchWeapons(ESWT_SECONDARY, time);
 	}
 };

@@ -31,6 +31,8 @@ public:
 
 	class GeneralManager * getManager() { return manager; }
 
+	class ProjectileManager * getProjectileManager() { return projectileManager; }
+
 	irr::u32 getLastFrameTime() { return lastFrameTime; }
 
 	void debugMessage(irr::core::stringw mes);
@@ -61,7 +63,7 @@ private:
 	class Settings * settings;
 
 	class GeneralManager * manager;
-
+	class ProjectileManager * projectileManager;
 	class ShadowManager * shadowManager;
 
 	std::vector<class GameState*> stateStack;

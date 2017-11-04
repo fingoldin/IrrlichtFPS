@@ -11,6 +11,7 @@ public:
 	PlayerState()
 	{
 		lastUpdateTime = 0;
+		startTime = 0;
 	}
 
 	virtual ~PlayerState() { }
@@ -35,50 +36,54 @@ public:
 #ifdef _DEBUG
 		irr::core::stringw mes = "PlayerState: ";
 
-		core->debugMessage(name);
+		//core->debugMessage(name);
 #endif
 	}
 	
-	virtual void enter(Character * player)
+	virtual void enter(Character * player, irr::u32 time)
 	{
+		lastUpdateTime = time;
+
+		startTime = time;
 	}
 
 	virtual void exit(Character * player) { }
 
-	virtual void look(Character * player, double dx, double dy)
+	virtual void look(Character * player, irr::f32 dx, irr::f32 dy)
 	{
 		if (!player)
 			return;
 
 		player->setHorizontalAngle(player->getHorizontalAngle() + dx);
 
-		double vangle = player->getVerticalAngle() + dy;
+		irr::f32 vangle = player->getVerticalAngle() + dy;
 
-		if (vangle > LOOK_MAX_ANGLE * 2.0f && vangle < 360.0f - LOOK_MAX_ANGLE)
+		/*if (vangle > LOOK_MAX_ANGLE * 2.0f && vangle < 360.0f - LOOK_MAX_ANGLE)
 		{
 			vangle = 360.0f - LOOK_MAX_ANGLE;
 		}
 		else if (vangle > LOOK_MAX_ANGLE && vangle < 360.0f - LOOK_MAX_ANGLE)
 		{
 			vangle = LOOK_MAX_ANGLE;
-		}
+		}*/
 
 		player->setVerticalAngle(vangle);
 	}
 
-	virtual void jump(Character * player) { }
+	virtual void jump(Character * player, irr::u32 time) { }
 
-	virtual void move(Character * player, int x, int y, double speed, irr::u32 dt)
+	virtual void move(Character * player, int x, int y, irr::f32 speed, irr::u32 dt)
 	{
 		irr::core::vector3df moveDir = player->getThirdPersonNode().root->getRotation().rotationToDirection();
 		irr::core::vector3df strafeDir = -moveDir.crossProduct(irr::core::vector3df(0.0f, 1.0f, 0.0f));
 
-		player->setPosition(player->getPosition() + speed * (y * moveDir + x * strafeDir).normalize() * ((double)dt / 1000.0f));
+		player->setPosition(player->getPosition() + speed * ((irr::f32)y * moveDir + (irr::f32)x * strafeDir).normalize() * ((irr::f32)dt / 1000.0f));
 	}
 
 protected:
 
 	irr::u32 lastUpdateTime;
+	irr::u32 startTime;
 
 	irr::core::stringw name;
 };

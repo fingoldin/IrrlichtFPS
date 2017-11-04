@@ -19,7 +19,7 @@ void ShadowManager::generateMaps(irr::scene::ISceneManager * smgr)
 	irr::core::array<irr::scene::ISceneNode*> lights;
 	smgr->getSceneNodesFromType(irr::scene::ESNT_LIGHT, lights);
 
-	for (int i = 0; i < lights.size(); i++)
+	for (irr::u32 i = 0; i < lights.size(); i++)
 	{
 	}
 }

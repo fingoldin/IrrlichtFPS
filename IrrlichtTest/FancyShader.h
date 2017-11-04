@@ -89,7 +89,7 @@ public:
 		int dlights = 0;
 		int slights = 0;
 
-		for (int i = 0; i < lightNodes.size(); i++)
+		for (size_t i = 0; i < lightNodes.size(); i++)
 		{
 			irr::video::SLight light = ((irr::scene::ILightSceneNode*)lightNodes[i])->getLightData();
 			std::string pnum = std::to_string(plights);

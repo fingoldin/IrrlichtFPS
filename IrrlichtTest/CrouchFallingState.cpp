@@ -10,7 +10,7 @@ void CrouchFallingState::update(Character * player, Core * core, irr::u32 time)
 		return;
 
 	if (!player->getInputState(EIS_CROUCH))
-		player->setState(DBG_NEW FallingState());
-
-	CrouchingState::update(player, core, time);
+		player->setState(DBG_NEW FallingState(), time);
+	else
+		CrouchingState::update(player, core, time);
 }

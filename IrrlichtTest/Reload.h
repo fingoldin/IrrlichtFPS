@@ -16,8 +16,8 @@ public:
 
 	}
 
-	void run(Character * player, bool flag)
+	void run(Character * player, bool flag, irr::u32 time)
 	{
-		//player->getState()->moveY(1);
+		player->getEState()->reload(player, time);
 	}
 };

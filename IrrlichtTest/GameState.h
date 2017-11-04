@@ -40,12 +40,17 @@ public:
 
 	virtual void handleEvent(Core * core, const irr::SEvent& event)
 	{
+		if (!core)
+			return;
+
 		bool handled = false;
 
 		InputMap * inputMap = core->getInputMap();
 
 		std::vector<Command*> commands;
 		bool pressed = false;
+
+		irr::u32 time = core->getDevice()->getTimer()->getTime();
 
 		if (event.EventType == irr::EET_KEY_INPUT_EVENT)
 		{
@@ -67,7 +72,7 @@ public:
 		{
 			for (std::vector<EventInputContext*>::size_type j = 0; j != eventContexts.size(); j++)
 			{
-				if (eventContexts[j]->runCommand(core, commands[i], pressed))
+				if (eventContexts[j]->runCommand(core, commands[i], pressed, time))
 				{
 					handled = true;
 					break;

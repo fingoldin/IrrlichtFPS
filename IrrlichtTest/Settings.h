@@ -18,12 +18,12 @@ public:
 	Settings();
 	~Settings();
 
-	double queryDouble(E_DOUBLE_SETTING setting) { return doubleSettings[setting]; }
+	irr::f32 queryDouble(E_DOUBLE_SETTING setting) { return doubleSettings[setting]; }
 	bool queryBool(E_BOOL_SETTING setting) { return boolSettings[setting]; }
 
 private:
 
-	double doubleSettings[E_DOUBLE_SETTING_COUNT];
+	irr::f32 doubleSettings[E_DOUBLE_SETTING_COUNT];
 	bool boolSettings[E_BOOL_SETTING_COUNT];
 };
 

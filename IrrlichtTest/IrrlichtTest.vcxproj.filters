@@ -52,6 +52,12 @@
     <Filter Include="Header Files\Animations">
       <UniqueIdentifier>{d48ba5b6-93b8-4f7d-8ce6-8a4adfc972e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Hitboxes">
+      <UniqueIdentifier>{2d462757-de34-4ced-b96e-72ae8ac92bdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers">
+      <UniqueIdentifier>{3c8db20c-21da-4775-9aca-57c13f177203}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -153,14 +159,8 @@
     <ClInclude Include="Jump.h">
       <Filter>Header Files\Input\Commands</Filter>
     </ClInclude>
-    <ClInclude Include="Die.h">
-      <Filter>Header Files\Input\Commands</Filter>
-    </ClInclude>
     <ClInclude Include="AliveContext.h">
       <Filter>Header Files\Input\InputContexts</Filter>
-    </ClInclude>
-    <ClInclude Include="Spawn.h">
-      <Filter>Header Files\Input\Commands</Filter>
     </ClInclude>
     <ClInclude Include="DeadState.h">
       <Filter>Header Files\States\PlayerStates</Filter>
@@ -210,17 +210,11 @@
     <ClInclude Include="SwitchKnife.h">
       <Filter>Header Files\Input\Commands</Filter>
     </ClInclude>
-    <ClInclude Include="CanSwitchState.h">
-      <Filter>Header Files\States\PlayerStates\EquipmentStates</Filter>
-    </ClInclude>
     <ClInclude Include="Weapon.h">
       <Filter>Header Files\Weapons</Filter>
     </ClInclude>
     <ClInclude Include="FiveSeven.h">
       <Filter>Header Files\Weapons</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneralManager.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ExitContext.h">
       <Filter>Header Files\Input\InputContexts</Filter>
@@ -249,9 +243,6 @@
     <ClInclude Include="FancyShader.h">
       <Filter>Header Files\Shaders</Filter>
     </ClInclude>
-    <ClInclude Include="ShadowManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="M4A4.h">
       <Filter>Header Files\Weapons</Filter>
     </ClInclude>
@@ -269,6 +260,39 @@
     </ClInclude>
     <ClInclude Include="SemiAutoAnimation.h">
       <Filter>Header Files\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="ReloadAnimation.h">
+      <Filter>Header Files\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="CanReloadState.h">
+      <Filter>Header Files\States\PlayerStates\EquipmentStates</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterHitboxNode.h">
+      <Filter>Header Files\Hitboxes</Filter>
+    </ClInclude>
+    <ClInclude Include="HitboxActor.h">
+      <Filter>Header Files\Hitboxes</Filter>
+    </ClInclude>
+    <ClInclude Include="HitboxNode.h">
+      <Filter>Header Files\Hitboxes</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereHitboxNode.h">
+      <Filter>Header Files\Hitboxes</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneralManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectileManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LegMovingState.h">
+      <Filter>Header Files\States\PlayerStates\VirtualStates</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -323,9 +347,6 @@
     <ClCompile Include="CrouchFallingState.cpp">
       <Filter>Source Files\States</Filter>
     </ClCompile>
-    <ClCompile Include="CanSwitchState.cpp">
-      <Filter>Source Files\States</Filter>
-    </ClCompile>
     <ClCompile Include="Weapon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -348,6 +369,27 @@
       <Filter>Source Files\States</Filter>
     </ClCompile>
     <ClCompile Include="FiringState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="EquipmentState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="CanReloadState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterHitboxNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereHitboxNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectileManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HitboxActor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LegMovingState.cpp">
       <Filter>Source Files\States</Filter>
     </ClCompile>
   </ItemGroup>

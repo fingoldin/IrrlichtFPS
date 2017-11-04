@@ -14,12 +14,14 @@ public:
 	{
 		if (firstUpdate)
 		{
-			startTime = timeMs;
 			firstUpdate = false;
 			node->setRotation(irr::core::vector3df(0.0f, 0.0f, 0.0f));
 		}
 
-		node->setPosition(irr::core::vector3df(-0.2f, 0.4f + 0.03f * sin(0.01 * (double)(timeMs - startTime)), -0.4f));
+		if (!startTime)
+			startTime = timeMs;
+
+		node->setPosition(irr::core::vector3df(-0.2f, 0.4f + 0.03f * (irr::f32)sin(0.01 * (double)(timeMs - startTime)), -0.4f));
 	}
 
 	virtual ISceneNodeAnimator * createClone(irr::scene::ISceneNode *node, irr::scene::ISceneManager *newManager = 0)

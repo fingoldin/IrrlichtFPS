@@ -18,6 +18,8 @@
 
 #include "ShadowManager.h"
 
+#include "ProjectileManager.h"
+
 #include "Core.h"
 
 Core::Core(const wchar_t * name) : w_name(name)
@@ -27,7 +29,7 @@ Core::Core(const wchar_t * name) : w_name(name)
 	irr::SIrrlichtCreationParameters params;
 	params.DriverType = irr::video::EDT_OPENGL;
 	params.EventReceiver = eventReceiver;
-	params.WindowSize = irr::core::dimension2d<irr::u32>(1920, 1080);
+	params.WindowSize = irr::core::dimension2d<irr::u32>(1280, 720);
 	params.AntiAlias = 16;
 	params.Fullscreen = false;
 	params.Vsync = false;
@@ -74,6 +76,8 @@ Core::Core(const wchar_t * name) : w_name(name)
 	inputMap = DBG_NEW InputMap(this);
 
 	manager = DBG_NEW GeneralManager(this);
+
+	projectileManager = DBG_NEW ProjectileManager(this);
 
 	settings = DBG_NEW Settings();
 
@@ -122,6 +126,8 @@ Core::~Core()
 {
 	Command::cleanupCommands();
 	Shader::cleanupShaders();
+
+	projectileManager->drop();
 
 	for (std::vector<GameState*>::size_type i = 0; i != stateStack.size(); i++)
 		if (stateStack[i])

@@ -11,6 +11,8 @@ enum E_WEAPON_ANIM
 	EWA_REST = 0,
 	EWA_SWITCH,
 	EWA_ATTACK,
+	EWA_NOBULLETS,
+	EWA_RELOAD,
 	E_WEAPON_ANIM_COUNT
 };
 
@@ -38,15 +40,32 @@ public:
 
 	irr::u32 getSwitchTime() { return switchTime; }
 	irr::u32 getShotTime() { return shotTime; }
+	irr::u32 getReloadTime() { return reloadTime; }
+	irr::u32 getActualReloadTime() { return actualReloadTime; }
 	bool getCanSpray() { return canSpray; }
+
+	int getMagCapacity() { return magCapacity; }
+	int getMagBullets() { return magBullets; }
+	int getTotalBullets() { return totalBullets; }
+
+	bool fire();
+	bool reload();
 
 	Animation * getAnimation(E_WEAPON_ANIM anim) { return anims[anim]; }
 
 protected:
 
 	irr::u32 reloadTime;
+	irr::u32 actualReloadTime;
 	irr::u32 shotTime;
 	irr::u32 switchTime;
+
+	irr::f32 damageCoef;
+	irr::f32 pStrength;
+
+	int magCapacity;
+	int magBullets;
+	int totalBullets;
 
 	bool canSpray;
 	bool canFireWhileReloading;
